@@ -1,13 +1,207 @@
-body {
+/* 
+====== 
+Fonts
+======
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300i,400|Solway:400,500&display=swap");
+/* 
+====== 
+Variables 
+======
+*/
+:root {
+  --primaryLightColor: #d4e6a5;
+  --primaryColor: #476a2e;
+  --primaryDarkColor: #c02c03;
+  --primaryFont: "Open Sans", sans-serif;
+  --slantedFont: "Solway", serif;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBackground: #f8f8f8;
+  --mainOverlay: rgba(35, 10, 36, 0.4);
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+  --mainRed: #bd0303;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.3rem;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --mainBorderRadius: 0.25rem;
+  --smallWidth: 85vw;
+  --maxWidth: 40rem;
+  --fullWidth: 1170px;
+}
+/* 
+====== 
+Global Styles 
+======
+*/
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: var(--primaryFont);
+  color: var(--mainBlack);
+  background: var(--mainBackground);
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 300;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--slantedFont);
+  margin-bottom: 1.25rem;
+  letter-spacing: var(--mainSpacing);
+}
+p {
+  margin-bottom: 1.25rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--mainBlack);
+}
+img {
+  width: 100%;
+  display: block;
+}
+.loading {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.7rem;
+  margin-top: 3rem;
+  letter-spacing: var(--mainSpacing);
+}
+.loading img {
+  width: 10rem;
+  margin: 0 auto;
+}
+/* 
+====== 
+Buttons 
+======
+*/
+.btn,
+.btn-white,
+.btn-primary {
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  color: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
+  padding: 0.45rem 0.8rem;
+  display: inline-block;
+  transition: var(--mainTransition);
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: transparent;
+  border-radius: 0.15rem;
+}
+.btn:hover {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+}
+.btn-white {
+  background: transparent;
+  color: var(--mainWhite);
+  border-color: var(--mainWhite);
+}
+.btn-white:hover {
+  background: var(--mainWhite);
+  color: var(--primaryColor);
+}
+.btn-primary {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  border-color: var(--primaryColor);
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+.btn-block {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: var(--lightShadow);
+  text-align: center;
+}
+.btn-details {
+  padding: 0.25rem 0.4rem;
+}
+.btn-details:hover {
+  background: var(--primaryLightColor);
+  border-color: var(--primaryLightColor);
+}
+/* 
+====== 
+Cocktails List 
+======
+*/
+
+.section {
+  padding: 4rem 0;
+}
+.section-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.cocktails-center {
+  width: var(--smallWidth);
+  margin: 0 auto;
+  max-width: var(--fullWidth);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(370.8px, 1fr));
+  column-gap: 1.8rem;
+  row-gap: 1.8rem;
+  /* align-items: start; */
+}
+/* 
+====== 
+Cocktail 
+======
+*/
+
+.cocktail {
+  background: var(--mainWhite);
+  margin-bottom: 2rem;
+  box-shadow: var(--lightShadow);
+  transition: var(--mainTransition);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: 0.15rem;
+}
+.cocktail:hover {
+  box-shadow: var(--darkShadow);
+}
+.cocktail img {
+  border-top-left-radius: 0.15rem;
+  border-top-right-radius: 0.15rem;
+}
+.cocktail-footer {
+  padding: 1.5rem;
+}
+.cocktail-footer h3,
+.cocktail-footer h4,
+.cocktail-footer p {
+  margin-bottom: 0.3rem;
+}
+.cocktail-footer h3 {
+  font-size: 2.2rem;
+}
+.cocktail-footer p {
+  color: var(--darkGrey);
+  margin-bottom: 0.5rem;
 }
