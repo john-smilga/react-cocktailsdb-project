@@ -5,7 +5,11 @@ export default function CocktailList({ cocktails, loading }) {
     return <h2 className="section-title">Loading...</h2>;
   }
   if (cocktails.length < 1) {
-    return <h2 className="section-title">there are no cocktails to display</h2>;
+    return (
+      <h2 className="section-title">
+        no cocktails matched your search criteria
+      </h2>
+    );
   }
   return (
     <section className="section">

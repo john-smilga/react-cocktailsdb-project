@@ -104,7 +104,7 @@ Buttons
   cursor: pointer;
   font-size: 0.8rem;
   background: transparent;
-  border-radius: 0.15rem;
+  border-radius: var(--mainBorderRadius);
 }
 .btn:hover {
   background: var(--primaryColor);
@@ -186,6 +186,34 @@ Navbar
 }
 /* 
 ====== 
+About
+======
+*/
+.about-section {
+  width: var(--smallWidth);
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+}
+.about-section p {
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+/* 
+====== 
+Error
+======
+*/
+.error-page {
+  display: flex;
+  justify-content: center;
+}
+.error-container {
+  text-align: center;
+  text-transform: capitalize;
+}
+/* 
+====== 
 Cocktails List 
 ======
 */
@@ -223,14 +251,14 @@ Cocktail
   transition: var(--mainTransition);
   display: grid;
   grid-template-rows: auto 1fr;
-  border-radius: 0.15rem;
+  border-radius: var(--mainBorderRadius);
 }
 .cocktail:hover {
   box-shadow: var(--darkShadow);
 }
 .cocktail img {
-  border-top-left-radius: 0.15rem;
-  border-top-right-radius: 0.15rem;
+  border-top-left-radius: var(--mainBorderRadius);
+  border-top-right-radius: var(--mainBorderRadius);
 }
 .cocktail-footer {
   padding: 1.5rem;
@@ -246,4 +274,37 @@ Cocktail
 .cocktail-footer p {
   color: var(--darkGrey);
   margin-bottom: 0.5rem;
+}
+/* 
+====== 
+Form
+======
+*/
+
+.form {
+  width: var(--smallWidth);
+  margin: 0 auto;
+  max-width: var(--maxWidth);
+}
+
+.search-form {
+  background: var(--mainWhite);
+  padding: 1.25rem 1rem;
+  text-transform: capitalize;
+  border-radius: var(--mainBorderRadius);
+  box-shadow: var(--lightShadow);
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--primaryColor);
+}
+.form-control input {
+  width: 100%;
+  border: none;
+  border: 2px solid var(--darkGrey);
+  border-radius: var(--mainBorderRadius);
+  padding: 0.5rem;
+  font-size: 1.2rem;
 }
