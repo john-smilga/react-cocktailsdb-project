@@ -308,3 +308,38 @@ Form
   padding: 0.5rem;
   font-size: 1.2rem;
 }
+/* 
+====== 
+Cocktail
+======
+*/
+
+.drink {
+  width: var(--smallWidth);
+  max-width: var(--fullWidth);
+  margin: 0 auto;
+}
+.drink img {
+  border-radius: var(--mainBorderRadius);
+}
+.drink p {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.drink span {
+  margin-right: 0.5rem;
+}
+.drink-info {
+  padding-top: 2rem;
+}
+@media screen and (min-width: 992px) {
+  .drink {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .drink-info {
+    padding-top: 0;
+  }
+}

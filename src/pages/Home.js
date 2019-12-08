@@ -12,7 +12,7 @@ export default function Home() {
       try {
         const response = await fetch(
           `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`
-        ).catch(error => console.log(error));
+        );
         const data = await response.json();
         const { drinks } = data;
         if (drinks) {
