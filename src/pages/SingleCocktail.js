@@ -1,5 +1,6 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+
 export default function SingleCocktail() {
   const { id } = useParams();
   const [loading, setLoading] = React.useState(false);
@@ -70,7 +71,10 @@ export default function SingleCocktail() {
       ingredients
     } = cocktail;
     return (
-      <section className="section">
+      <section className="section cocktail-section">
+        <Link to="/" className="btn btn-primary">
+          back home
+        </Link>
         <h2 className="section-title">{name}</h2>
         <div className="drink">
           <img src={image} alt={name}></img>

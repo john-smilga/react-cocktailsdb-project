@@ -105,6 +105,7 @@ Buttons
   font-size: 0.8rem;
   background: transparent;
   border-radius: var(--mainBorderRadius);
+  display: inline-block;
 }
 .btn:hover {
   background: var(--primaryColor);
@@ -227,6 +228,7 @@ Cocktails List
   letter-spacing: var(--mainSpacing);
   text-align: center;
   margin-bottom: 3.5rem;
+  margin-top: 1rem;
 }
 .cocktails-center {
   width: var(--smallWidth);
@@ -314,10 +316,14 @@ Cocktail
 ======
 */
 
+.cocktail-section {
+  text-align: center;
+}
 .drink {
   width: var(--smallWidth);
   max-width: var(--fullWidth);
   margin: 0 auto;
+  text-align: left;
 }
 .drink img {
   border-radius: var(--mainBorderRadius);
